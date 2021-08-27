@@ -5,17 +5,20 @@ const { viajante } = require("./../../app");
 
 /** GIVEN */
 
-Given('um Traveler de nome {string}', function (string) {
-    viajante.name = string;
-});
+    Given('um Traveler de nome {string}', function (string) {
+        
+        viajante.name = string;
+    });
 
-Given('ele sempre começa a viagem com {int} refeição', function (int) {
-    viajante.food = int;
-});
+    Given('ele sempre começa a viagem com {int} refeição', function (int) {
+        
+        viajante.food = int;
+    });
 
-Given('ele sempre começa a viagem saudável.', function () {
-    viajante.isHealthy = true;
-});
+    Given('ele sempre começa a viagem saudável.', function () {
+        
+        viajante.isHealthy = true;
+    });
 
 /** WHEN */
 
@@ -26,7 +29,7 @@ When('o Traveler sair para caçar {int} vezes', function (int) {
 });
 
 When('o Traveler parar para comer {int} vezes', function (int) {
-    for (let contador=0; contador < int; contador++) {
+    for (let contador = 0; contador < int; contador++) {
         viajante.eat();
     }
 });
